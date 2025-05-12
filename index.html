@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý tuyển sinh</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <h2>Quản lý tuyển sinh</h2>
+
+  <label>Điểm chuẩn hội đồng:
+    <input type="number" id="diemChuan" step="0.1">
+  </label>
+
+  <label>Điểm môn 1:
+    <input type="number" id="mon1" step="0.1">
+  </label>
+
+  <label>Điểm môn 2:
+    <input type="number" id="mon2" step="0.1">
+  </label>
+
+  <label>Điểm môn 3:
+    <input type="number" id="mon3" step="0.1">
+  </label>
+
+  <label>Khu vực:
+    <select id="khuVuc">
+      <option value="X">Không thuộc ưu tiên</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+    </select>
+  </label>
+
+  <label>Đối tượng:
+    <select id="doiTuong">
+      <option value="0">Không thuộc ưu tiên</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+  </label>
+
+  <button onclick="kiemTra()">Kiểm tra kết quả</button>
+
+  <label>Tổng điểm:
+    <input type="text" id="tongDiem" readonly>
+  </label>
+
+  <label>Kết quả:
+    <input type="text" id="ketQua" class="ketqua" readonly>
+  </label>
+
+  <h2>Bài Tập: Tính Tiền Điện</h2>
+
+  <label>Tên người dùng:
+    <input type="text" id="ten">
+  </label>
+
+  <label>Số Kw tiêu thụ:
+    <input type="number" id="soKw">
+  </label>
+
+  <button onclick="tinhTienDien()">Tính tiền</button>
+
+  <label>Kết quả:
+    <input type="text" id="ketQua2" class="ketqua" readonly>
+  </label>
+
+  <h2>Bài Tập: Tính Thuế Thu Nhập Cá Nhân</h2>
+
+  <label>Họ tên:
+    <input type="text" id="hoTen">
+  </label>
+
+  <label>Tổng thu nhập năm (triệu):
+    <input type="number" id="thuNhap" step="0.1">
+  </label>
+
+  <label>Số người phụ thuộc:
+    <input type="number" id="phuThuoc">
+  </label>
+
+  <button onclick="tinhThue()">Tính Thuế</button>
+
+  <label>Kết quả:
+    <input type="text" id="ketQua3" class="ketqua" readonly>
+  </label>
+
+  <h2>Tính Hóa Đơn Cáp</h2>
+
+  <label>Mã khách hàng:
+    <input type="text" id="maKH">
+  </label>
+
+  <label>Loại khách hàng:
+    <select id="loaiKH" onchange="toggleKetNoi()">
+      <option value="">-- Chọn loại khách hàng --</option>
+      <option value="dan">Nhà dân</option>
+      <option value="doanh">Doanh nghiệp</option>
+    </select>
+  </label>
+
+  <label id="labelKetNoi">Số kết nối:
+    <input type="number" id="soKetNoi" min="0">
+  </label>
+
+  <label>Số kênh cao cấp:
+    <input type="number" id="soKenh" min="0">
+  </label>
+
+  <button onclick="tinhTienCap()">Tính hóa đơn</button>
+
+  <label>Kết quả:
+    <input type="text" id="ketQua4" class="ketqua" readonly>
+  </label>
+
+  
+  <script src="./main.js"></script>
+
+  
+  </body>
+</html>
